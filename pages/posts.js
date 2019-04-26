@@ -8,7 +8,7 @@ export default class extends Component {
   static async getInitialProps () {
 
     // Make request for posts.
-    const response = await axios.get( 'https://koodielamastani.fi/wp-json/wp/v2/posts')
+    const response = await axios.get( 'http://localhost:8888/codeformylife/wp-json/wp/v2/posts')
 
     // Return response to posts object in props.
     return {
@@ -21,7 +21,7 @@ export default class extends Component {
       <Fragment>
         <Navigation/>
         <h1>Our Posts Page!</h1>
-        <ul>
+         <ul>
           {
             this.props.posts.map( post => {
               return (
