@@ -1,4 +1,4 @@
-# HeadlessWordPressWithReact
+# Headless WordPress with React and Next.js
 
 A test how to buid front-end with React on top of WordPress. Followed tutorial:  
 https://webdevstudios.com/2019/01/03/headless-wordpress-with-react-and-nextjs-1/   
