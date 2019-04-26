@@ -29,3 +29,6 @@ package.json
 pages      
   index.js   
   posts.js   
+
+# Axios   
+Axios is used for making API request to WordPress. To learn more, see  https://github.com/axios/axios.  
