@@ -1,0 +1,21 @@
+{
+  "name": "Headless WordPress and React",
+  "version": "1.0.0",
+  "description": "Use WordPress as a backend and WordPress as a frontend",
+  "main": "./pages/index.js",
+  "scripts": {
+    "dev": "next -p 8080",
+    "build": "next build",
+    "start": "next start -p 8080",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
+
