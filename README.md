@@ -22,10 +22,10 @@ For example, /pages/about.js is served at site.com/about.
 
 README.md  
 components  
-  Navigation.js
+  Navigation.js   
 node_modules   
 package-lock.json   
 package.json   
-pages   
-  index.js
-  posts.js
+pages      
+  index.js   
+  posts.js   
