@@ -3,7 +3,7 @@
 A test how to buid front-end with React on top of WordPress. Followed tutorial:  
 https://webdevstudios.com/2019/01/03/headless-wordpress-with-react-and-nextjs-1/   
 
-Installing steps
+Installing steps   
 $ mkdir HeadlessWordPressWithReact   
 $ cd HeadlessWordPressWithReact   
 $ npm init   
