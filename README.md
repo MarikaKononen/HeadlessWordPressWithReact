@@ -39,3 +39,7 @@ https://expressjs.com
 
 Install express and next-routes:   
 $ npm install express next-routes --save   
+
+Next-routes is dynamic routes for Next.js
+https://github.com/fridays/next-routes
+
