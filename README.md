@@ -28,8 +28,8 @@ package-lock.json
 package.json   
 pages      
 &nbsp;  index.js   
-&nbsp;  posts.js
-&nbsp;  single.js   
+&nbsp;  posts.js   
+&nbsp;  single.js      
 routes.js   
 server.js   
 
