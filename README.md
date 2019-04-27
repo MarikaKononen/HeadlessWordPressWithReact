@@ -70,3 +70,5 @@ Next, add styled-jsx/babel to plugins in your babel configuration:
   ]   
 }   
 Now add <style jsx> to your code and fill it with CSS:   
+  
+npm install --save reactstrap react react-dom
