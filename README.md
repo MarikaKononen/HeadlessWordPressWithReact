@@ -11,7 +11,7 @@ $ npm install --save next react react-dom axios
 
 
 # Next.js
-This project uses React Framework Next.js for taking care of routing. 
+This project uses React Framework Next.js for taking care of direct routing. 
 https://nextjs.org  
 
 Next.js will serve each file in /pages under a pathname matching the filename.   
@@ -32,3 +32,8 @@ pages
 
 # Axios   
 Axios is used for making API request to WordPress. To learn more, see  https://github.com/axios/axios.  
+
+# Express   
+Express is Node.js web application framework which is needed for dynamic routing.   
+https://expressjs.com   
+
