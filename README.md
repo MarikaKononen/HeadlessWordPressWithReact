@@ -37,3 +37,5 @@ Axios is used for making API request to WordPress. To learn more, see  https://g
 Express is Node.js web application framework which is needed for dynamic routing.   
 https://expressjs.com   
 
+Install express and next-routes:   
+$ npm install express next-routes --save   
