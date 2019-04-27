@@ -55,4 +55,18 @@ $ npm install --save bootstrap
 
 # CSS   
 CSS loader   
-npm install --save-dev css-loader   
+$ npm install --save-dev css-loader   
+
+# styled jsx   
+
+Install 
+$ npm install --save styled-jsx   
+
+Next, add styled-jsx/babel to plugins in your babel configuration:   
+
+{   
+  "plugins": [   
+    "styled-jsx/babel"   
+  ]   
+}   
+Now add <style jsx> to your code and fill it with CSS:   
