@@ -1,21 +1,22 @@
 {
-  "name": "Headless WordPress and React",
+  "name": "HeadlessWP",
   "version": "1.0.0",
   "description": "Use WordPress as a backend and WordPress as a frontend",
   "main": "./pages/index.js",
   "scripts": {
-    "dev": "next -p 8080",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start -p 8080",
+    "start": "NODE_PATH=. NODE_ENV=production node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
+    "express": "^4.16.4",
     "next": "^8.1.0",
+    "next-routes": "^1.4.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }
 }
-
