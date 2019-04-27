@@ -53,5 +53,6 @@ https://facebook.github.io/create-react-app/docs/adding-bootstrap
 Install Bootstrap   
 $ npm install --save bootstrap
 
-
-
+# CSS   
+CSS loader   
+npm install --save-dev css-loader   
