@@ -46,3 +46,41 @@ $ npm install express next-routes --save
 Next-routes is dynamic routes for Next.js
 https://github.com/fridays/next-routes
 
+# Bootstrap   
+
+https://facebook.github.io/create-react-app/docs/adding-bootstrap   
+
+Install Bootstrap   
+$ npm install --save bootstrap
+
+# CSS   
+CSS loader   
+$ npm install --save-dev css-loader   
+
+# Styled with W3.CSS - CSS Framework   
+
+https://www.w3schools.com/w3css/default.asp   
+
+# Next.js + CSS   
+Import .css files in your Next.js project   
+https://github.com/zeit/next-plugins/tree/master/packages/next-css   
+
+$ npm install --save @zeit/next-css   
+
+Create a next.config.js in the root of your project (next to pages/ and package.json)   
+
+// next.config.js   
+const withCSS = require('@zeit/next-css')   
+module.exports = withCSS()   
+Create a CSS file style.css   
+
+.example {   
+ &nbsp;  font-size: 50px;   
+}   
+Create a page file pages/index.js
+
+import "../style.css"   
+
+export default () => <div className="example">Hello World!</div>   
+  
+
