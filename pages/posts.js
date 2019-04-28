@@ -3,6 +3,7 @@ import Navigation from '../components/Navigation'
 import React, { Component, Fragment } from 'react'
 import axios from 'axios'
 import Link from 'next/link'
+import "../style.css"
 
 export default class extends Component {
 
@@ -33,12 +34,20 @@ export default class extends Component {
           {
             this.props.posts.map( post => {
               return (
+                
                 <li key={ post.id }>
-                    <Link href={ `/posts/${ post.slug }` }>
-                        <a href={ `/posts/${ post.slug }` }>
-                            { post.title.rendered }
-                        </a>
-                     </Link>
+                  <div className="w3-card-4 w3-margin w3-white">
+                    <div className="w3-container">
+                
+                      <Link href={ `/posts/${ post.slug }` }>
+                          <a href={ `/posts/${ post.slug }` }>
+                              { post.title.rendered }
+                              { post.excerpt.rendered }
+                          </a>
+                      </Link>  
+                      
+                    </div>
+                  </div>
                 </li>
               )
             })

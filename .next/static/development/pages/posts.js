@@ -12416,6 +12416,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../style.css */ "./style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_12__);
+
 
 
 
@@ -12454,11 +12457,15 @@ function (_Component) {
       })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_Navigation__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h1", null, "Our Posts Page!"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("ul", null, this.props.posts.map(function (post) {
         return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("li", {
           key: post.id
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+          className: "w3-card-4 w3-margin w3-white"
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+          className: "w3-container"
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_11___default.a, {
           href: "/posts/".concat(post.slug)
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
           href: "/posts/".concat(post.slug)
-        }, post.title.rendered)));
+        }, post.title.rendered, post.excerpt.rendered)))));
       })));
     }
   }], [{
@@ -12505,7 +12512,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 0:
+/***/ 3:
 /*!************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fposts&absolutePagePath=%2FUsers%2Fmarikakononen%2FKoodaus%2FKoodausProjektit%2FGitHub%2FHeadlessWordPressWithReact%2Fpages%2Fposts.js ***!
   \************************************************************************************************************************************************************************************/
@@ -12528,5 +12535,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=posts.js.map

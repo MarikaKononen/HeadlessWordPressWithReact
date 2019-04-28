@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Navigation from '../components/Navigation'
 import { Fragment } from 'react'
+import 'bootstrap/dist/css/bootstrap.css';
+import "../style.css"
 
 export default () => (
   <Fragment>

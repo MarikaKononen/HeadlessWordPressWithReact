@@ -3,6 +3,7 @@ import Navigation from '../components/Navigation'
 import React, { Component } from 'react'
 import axios from 'axios';
 import { Fragment } from 'react'
+import "../style.css"
 
 export default class extends Component {
 
@@ -31,12 +32,22 @@ export default class extends Component {
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Head>
         <Navigation/>
-        <h1>{ this.props.post.title.rendered }</h1>
-        <article
-            className="entry-content"
-            dangerouslySetInnerHTML={ {
-            __html: this.props.post.content.rendered
-        } } />
+            <div className="w3-container">
+              <div className="w3-row">
+                <div className="w3-col l8 s12 w3-card-4 w3-margin w3-white">
+                  <h1 className="w3-center">{ this.props.post.title.rendered }</h1>
+                  
+                  <div className="w3-container">
+                      <article
+                              className="entry-content"
+                              dangerouslySetInnerHTML={ {
+                              __html: this.props.post.content.rendered
+                          } } />
+                  </div>
+                </div>    
+                </div> 
+             </div>
+        
       </Fragment>
     )
   }
