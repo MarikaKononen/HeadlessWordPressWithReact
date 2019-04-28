@@ -57,6 +57,10 @@ $ npm install --save bootstrap
 CSS loader   
 $ npm install --save-dev css-loader   
 
+# Styled with W3.CSS - CSS Framework   
+
+https://www.w3schools.com/w3css/default.asp   
+
 # Next.js + CSS   
 Import .css files in your Next.js project   
 https://github.com/zeit/next-plugins/tree/master/packages/next-css   
