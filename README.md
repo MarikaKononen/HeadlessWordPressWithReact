@@ -57,18 +57,26 @@ $ npm install --save bootstrap
 CSS loader   
 $ npm install --save-dev css-loader   
 
-# styled jsx   
+# Next.js + CSS   
+Import .css files in your Next.js project   
+https://github.com/zeit/next-plugins/tree/master/packages/next-css   
 
-Install 
-$ npm install --save styled-jsx   
+$ npm install --save @zeit/next-css   
 
-Next, add styled-jsx/babel to plugins in your babel configuration:   
+Create a next.config.js in the root of your project (next to pages/ and package.json)   
 
-{   
-  "plugins": [   
-    "styled-jsx/babel"   
-  ]   
+// next.config.js   
+const withCSS = require('@zeit/next-css')   
+module.exports = withCSS()   
+Create a CSS file style.css   
+
+.example {   
+ &nbsp;  font-size: 50px;   
 }   
-Now add <style jsx> to your code and fill it with CSS:   
+Create a page file pages/index.js
+
+import "../style.css"   
+
+export default () => <div className="example">Hello World!</div>   
   
-npm install --save reactstrap react react-dom
+
