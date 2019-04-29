@@ -12454,19 +12454,29 @@ function (_Component) {
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("meta", {
         name: "viewport",
         content: "initial-scale=1.0, width=device-width"
-      })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_Navigation__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h1", null, "Our Posts Page!"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("ul", null, this.props.posts.map(function (post) {
-        return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("li", {
+      })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        className: "w3-container"
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        className: "w3-row"
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_Navigation__WEBPACK_IMPORTED_MODULE_8__["default"], null)), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        className: "w3-row"
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        className: "w3-col"
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h1", null, "Our Posts Page!"))), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        className: "w3-row"
+      }, this.props.posts.map(function (post) {
+        return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+          className: "w3-col l4 s12",
           key: post.id
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
-          className: "w3-card-4 w3-margin w3-white"
-        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
-          className: "w3-container"
+          className: "w3-card-4 w3-margin w3-amber w3-padding-large"
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_11___default.a, {
           href: "/posts/".concat(post.slug)
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+          className: "w3-text-brown",
           href: "/posts/".concat(post.slug)
-        }, post.title.rendered, post.excerpt.rendered)))));
-      })));
+        }, post.title.rendered)), post.excerpt.rendered));
+      }))));
     }
   }], [{
     key: "getInitialProps",
@@ -12512,7 +12522,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 0:
 /*!************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fposts&absolutePagePath=%2FUsers%2Fmarikakononen%2FKoodaus%2FKoodausProjektit%2FGitHub%2FHeadlessWordPressWithReact%2Fpages%2Fposts.js ***!
   \************************************************************************************************************************************************************************************/
@@ -12535,5 +12545,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js","styles"]]]);
+},[[0,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=posts.js.map

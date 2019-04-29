@@ -28,31 +28,40 @@ export default class extends Component {
           <meta charSet="utf-8" />
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Head>
-        <Navigation/>
-        <h1>Our Posts Page!</h1>
-         <ul>
-          {
-            this.props.posts.map( post => {
-              return (
-                
-                <li key={ post.id }>
-                  <div className="w3-card-4 w3-margin w3-white">
-                    <div className="w3-container">
-                
-                      <Link href={ `/posts/${ post.slug }` }>
-                          <a href={ `/posts/${ post.slug }` }>
-                              { post.title.rendered }
-                              { post.excerpt.rendered }
-                          </a>
-                      </Link>  
+        <div className="w3-container">
+          <div className="w3-row">
+            <Navigation/>
+          </div>
+          <div className="w3-row">
+            <div className="w3-col">  
+              <h1>Our Posts Page!</h1>
+            </div>  
+          </div>    
+          <div className="w3-row">
+
+                {
+                  this.props.posts.map( post => {
+                    return (
+
+                      <div className="w3-col l4 s12" key={ post.id }>
+                        <div className="w3-card-4 w3-margin w3-amber w3-padding-large">
+  
+                            <Link  href={ `/posts/${ post.slug }` }>
+                                <a className="w3-text-brown" href={ `/posts/${ post.slug }` }>
+                                    { post.title.rendered }
+                                </a> 
+                            </Link>  
+                            { post.excerpt.rendered }
+
+                        </div>
+                      </div> 
                       
-                    </div>
-                  </div>
-                </li>
-              )
-            })
-          }
-        </ul>
+                    )
+                  })
+                }
+
+            </div>  
+        </div>
       </Fragment>
     )
   }
