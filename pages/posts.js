@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Navigation from '../components/Navigation'
+import PostExcerptCard from '../components/PostExcerptCard'
 import React, { Component, Fragment } from 'react'
 import axios from 'axios'
-import Link from 'next/link'
 import "../style.css"
 
 export default class extends Component {
@@ -18,6 +18,7 @@ export default class extends Component {
       posts: response.data
     }
   }
+  
 
   render() {
     return (
@@ -44,16 +45,11 @@ export default class extends Component {
                     return (
 
                       <div className="w3-col l4 s12" key={ post.id }>
-                        <div className="w3-card-4 w3-margin w3-amber w3-padding-large">
-  
-                            <Link  href={ `/posts/${ post.slug }` }>
-                                <a className="w3-text-brown" href={ `/posts/${ post.slug }` }>
-                                    { post.title.rendered }
-                                </a> 
-                            </Link>  
-                            { post.excerpt.rendered }
 
-                        </div>
+                        <PostExcerptCard title={ post.title.rendered } 
+                                         slug={ post.slug } 
+                                         excerpt= { post.excerpt.rendered } 
+                                         featured_img =  { post.featured_media.rendered} />
                       </div> 
                       
                     )
