@@ -87,3 +87,11 @@ export default () => <div className="example">Hello World!</div>
 # node-wpapi 
 
 http://wp-api.org/node-wpapi/installation/#install-with-npm
+
+
+# How to get Featured Image from WordPress JSON API   
+ 
+http://localhost:8888/codeformylife/wp-json/wp/v2/posts/?_embed   
+
+{post.featured_media ?  post._embedded['wp:featuredmedia']['0'].media_details.sizes['thumbnail'].source_url : null}  
+
