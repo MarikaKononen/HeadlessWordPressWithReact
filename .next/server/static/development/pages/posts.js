@@ -277,10 +277,12 @@ function (_Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "w3-card-4 w3-margin w3-margin-top w3-amber w3-padding-large"
+        className: "w3-card w3-margin w3-margin-top w3-amber"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "w3-center"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_FeaturedImage__WEBPACK_IMPORTED_MODULE_7__["default"], {
         featuredImgUrl: this.props.featuredImageUrl
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
         href: "/posts/".concat(this.props.slug)
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         className: "w3-text-brown",

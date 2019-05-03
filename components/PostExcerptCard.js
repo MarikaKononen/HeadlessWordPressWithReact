@@ -19,8 +19,10 @@ class PostExcerptCard extends Component {
 
     render() {
         return(
-            <div className="w3-card-4 w3-margin w3-margin-top w3-amber w3-padding-large">
-                <FeaturedImage featuredImgUrl = { this.props.featuredImageUrl }  />
+            <div className="w3-card w3-margin w3-margin-top w3-amber">
+                <div className="w3-center">
+                    <FeaturedImage featuredImgUrl = { this.props.featuredImageUrl }  />
+                </div>
                 <Link  href={ `/posts/${ this.props.slug }` }>
                     <a className="w3-text-brown" href={ `/posts/${ this.props.slug }` }>
                         { this.props.title }
