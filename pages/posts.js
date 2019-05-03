@@ -11,11 +11,12 @@ export default class extends Component {
   static async getInitialProps () {
 
     // Make request for posts.
-    const response = await axios.get( 'http://localhost:8888/codeformylife/wp-json/wp/v2/posts')
-
+    const response = await axios.get( 'http://localhost:8888/codeformylife/wp-json/wp/v2/posts/?_embed')
+    
     // Return response to posts object in props.
     return {
       posts: response.data
+
     }
   }
   
@@ -43,15 +44,16 @@ export default class extends Component {
                 {
                   this.props.posts.map( post => {
                     return (
-
                       <div className="w3-col l4 s12" key={ post.id }>
-
-                        <PostExcerptCard title={ post.title.rendered } 
-                                         slug={ post.slug } 
-                                         excerpt= { post.excerpt.rendered } 
-                                         featured_img =  { post.featured_media.rendered} />
+                        
+                        <PostExcerptCard title ={ post.title.rendered } 
+                                         slug ={ post.slug } 
+                                         excerpt = { post.excerpt.rendered }
+                                         featuredImageUrl =  {post.featured_media ?  post._embedded['wp:featuredmedia']['0'].media_details.sizes['thumbnail'].source_url : null}    
+                        />
+                                      
                       </div> 
-                      
+                    
                     )
                   })
                 }

@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Link from 'next/link'
+import FeaturedImage from './FeaturedImage'
 import "../style.css"
+
 
 
 class PostExcerptCard extends Component {
@@ -10,20 +12,22 @@ class PostExcerptCard extends Component {
             title: '',  
             slug: '',
             excerpt: '',
-            featured_img: ''
+            featuredImageUrl: ''
         }
     }
 
+
     render() {
         return(
-            <div className="w3-card-4 w3-margin w3-amber w3-padding-large">
+            <div className="w3-card-4 w3-margin w3-margin-top w3-amber w3-padding-large">
+                <FeaturedImage featuredImgUrl = { this.props.featuredImageUrl }  />
                 <Link  href={ `/posts/${ this.props.slug }` }>
                     <a className="w3-text-brown" href={ `/posts/${ this.props.slug }` }>
                         { this.props.title }
                     </a> 
                 </Link>  
                 { this.props.excerpt }
-                { this.props.featured_img }
+                
             </div>
         );
     }
