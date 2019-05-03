@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import Link from 'next/link'
 import FeaturedImage from './FeaturedImage'
 import "../style.css"
@@ -12,10 +13,11 @@ class PostExcerptCard extends Component {
             title: '',  
             slug: '',
             excerpt: '',
-            featuredImageUrl: ''
-        }
+            featuredImageUrl: '',
+            noHTMLExcerpt: ''
+        }    
     }
-
+    
 
     render() {
         return(
@@ -28,7 +30,9 @@ class PostExcerptCard extends Component {
                         { this.props.title }
                     </a> 
                 </Link>  
-                { this.props.excerpt }
+               
+                {this.props.excerpt}
+           
                 
             </div>
         );
