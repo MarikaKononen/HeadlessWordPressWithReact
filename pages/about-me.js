@@ -37,16 +37,11 @@ export default class extends Component {
           </div>    
           <div className="w3-row">
             {
-                  this.props.posts.map( post => {
+                  this.props.posts.map( page => {
                     return (
-                      <div className="w3-col l4 s12" key={ post.id }>
-                        
-                        <h3>{ post.title.rendered }</h3> 
-                        { post.content.rendered } 
-                        
-                                           
-                        
-                                      
+                      <div className="w3-col l6 s12" key={ page.id }>
+                        <h3>{ page.title.rendered }</h3>
+                        <div dangerouslySetInnerHTML={{__html: page.content.rendered}}></div>
                       </div> 
                     
                     )

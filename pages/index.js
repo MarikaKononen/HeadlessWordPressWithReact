@@ -6,9 +6,11 @@ import "../style.css"
 
 export default () => (
   <Fragment>
-      <Navigation />
       <Head />
       <div className="w3-container w3-deep-orange">
+        <div className="w3-row">
+            <Navigation/>
+        </div>
         <div className="w3-row">
           <div className="w3-col"> 
           <h1>Home</h1>

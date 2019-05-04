@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/articles.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/about-me.js"],{
 
 /***/ "./components/FeaturedImage.js":
 /*!*************************************!*\
@@ -8108,21 +8108,21 @@ exports.formatWithValidation = formatWithValidation;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Farticles&absolutePagePath=%2FUsers%2Fmarikakononen%2FKoodaus%2FKoodausProjektit%2FGitHub%2FHeadlessWordPressWithReact%2Fpages%2Farticles.js!./":
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout-me&absolutePagePath=%2FUsers%2Fmarikakononen%2FKoodaus%2FKoodausProjektit%2FGitHub%2FHeadlessWordPressWithReact%2Fpages%2Fabout-me.js!./":
 /*!**************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Farticles&absolutePagePath=%2FUsers%2Fmarikakononen%2FKoodaus%2FKoodausProjektit%2FGitHub%2FHeadlessWordPressWithReact%2Fpages%2Farticles.js ***!
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout-me&absolutePagePath=%2FUsers%2Fmarikakononen%2FKoodaus%2FKoodausProjektit%2FGitHub%2FHeadlessWordPressWithReact%2Fpages%2Fabout-me.js ***!
   \**************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/articles", function() {
-      var page = __webpack_require__(/*! ./pages/articles.js */ "./pages/articles.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/about-me", function() {
+      var page = __webpack_require__(/*! ./pages/about-me.js */ "./pages/about-me.js")
       if(true) {
-        module.hot.accept(/*! ./pages/articles.js */ "./pages/articles.js", function() {
-          if(!next.router.components["/articles"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/articles.js */ "./pages/articles.js")
-          next.router.update("/articles", updatedPage.default || updatedPage)
+        module.hot.accept(/*! ./pages/about-me.js */ "./pages/about-me.js", function() {
+          if(!next.router.components["/about-me"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/about-me.js */ "./pages/about-me.js")
+          next.router.update("/about-me", updatedPage.default || updatedPage)
         })
       }
       return { page: page.default || page }
@@ -12573,9 +12573,9 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./pages/articles.js":
+/***/ "./pages/about-me.js":
 /*!***************************!*\
-  !*** ./pages/articles.js ***!
+  !*** ./pages/about-me.js ***!
   \***************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -12636,17 +12636,16 @@ function (_Component) {
         className: "w3-row"
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
         className: "w3-col"
-      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("h1", null, "All Articles"))), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("h1", null, "About me"))), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
         className: "w3-row"
-      }, this.props.posts.map(function (post) {
+      }, this.props.posts.map(function (page) {
         return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
-          className: "w3-col l3 s12",
-          key: post.id
-        }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_PostExcerptCard__WEBPACK_IMPORTED_MODULE_9__["default"], {
-          title: post.title.rendered,
-          slug: post.slug,
-          excerpt: post.excerpt.rendered,
-          featuredImageUrl: post.featured_media ? post._embedded['wp:featuredmedia']['0'].media_details.sizes['thumbnail'].source_url : null
+          className: "w3-col l6 s12",
+          key: page.id
+        }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("h3", null, page.title.rendered), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
+          dangerouslySetInnerHTML: {
+            __html: page.content.rendered
+          }
         }));
       }))));
     }
@@ -12663,7 +12662,7 @@ function (_Component) {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return axios__WEBPACK_IMPORTED_MODULE_11___default.a.get('http://localhost:8888/codeformylife/wp-json/wp/v2/posts/?_embed');
+                return axios__WEBPACK_IMPORTED_MODULE_11___default.a.get('http://localhost:8888/codeformylife/wp-json/wp/v2/pages/?slug=about-me');
 
               case 2:
                 response = _context.sent;
@@ -12694,14 +12693,14 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 0:
+/***/ 7:
 /*!******************************************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Farticles&absolutePagePath=%2FUsers%2Fmarikakononen%2FKoodaus%2FKoodausProjektit%2FGitHub%2FHeadlessWordPressWithReact%2Fpages%2Farticles.js ***!
+  !*** multi next-client-pages-loader?page=%2Fabout-me&absolutePagePath=%2FUsers%2Fmarikakononen%2FKoodaus%2FKoodausProjektit%2FGitHub%2FHeadlessWordPressWithReact%2Fpages%2Fabout-me.js ***!
   \******************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Farticles&absolutePagePath=%2FUsers%2Fmarikakononen%2FKoodaus%2FKoodausProjektit%2FGitHub%2FHeadlessWordPressWithReact%2Fpages%2Farticles.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Farticles&absolutePagePath=%2FUsers%2Fmarikakononen%2FKoodaus%2FKoodausProjektit%2FGitHub%2FHeadlessWordPressWithReact%2Fpages%2Farticles.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fabout-me&absolutePagePath=%2FUsers%2Fmarikakononen%2FKoodaus%2FKoodausProjektit%2FGitHub%2FHeadlessWordPressWithReact%2Fpages%2Fabout-me.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout-me&absolutePagePath=%2FUsers%2Fmarikakononen%2FKoodaus%2FKoodausProjektit%2FGitHub%2FHeadlessWordPressWithReact%2Fpages%2Fabout-me.js!./");
 
 
 /***/ }),
@@ -12717,5 +12716,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js","styles"]]]);
-//# sourceMappingURL=articles.js.map
+},[[7,"static/runtime/webpack.js","styles"]]]);
+//# sourceMappingURL=about-me.js.map
