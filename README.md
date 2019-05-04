@@ -99,6 +99,9 @@ http://localhost:8888/codeformylife/wp-json/wp/v2/posts/?_embed
 
 https://github.com/WP-API/WP-API/issues/2949   
 Find ID:   
-<your-page>/wp/v2/categories?slug=some-category-slug
+<your-page>/wp/v2/categories?slug=some-category-slug   
 Do request:   
-<your-page>/wp/v2/posts?categories=some-category-id
+<your-page>/wp/v2/posts?categories=some-category-id   
+ 
+ # WordPress rest API - fetch pages with slug name  
+<your-page>/codeformylife/wp-json/wp/v2/pages/?slug=<page-slug>   
