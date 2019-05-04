@@ -44,7 +44,8 @@ export default class extends Component {
                         <PostExcerptCard title ={ post.title.rendered } 
                                          slug ={ post.slug } 
                                          excerpt = { post.excerpt.rendered }
-                                         featuredImageUrl =  {post.featured_media ?  post._embedded['wp:featuredmedia']['0'].media_details.sizes['thumbnail'].source_url : null}    
+                                         featuredImageUrl =  {post.featured_media ?  post._embedded['wp:featuredmedia']['0'].media_details.sizes['thumbnail'].source_url : null}  
+                                        
                         />
                                       
                       </div> 

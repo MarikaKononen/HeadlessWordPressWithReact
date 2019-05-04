@@ -218,10 +218,10 @@ __webpack_require__.r(__webpack_exports__);
   }, "About Me"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "w3-padding-large"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/posts"
+    href: "/articles"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/posts"
-  }, "Posts"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    href: "/articles"
+  }, "Articles"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "w3-padding-large"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/coding"
@@ -293,8 +293,7 @@ function (_Component) {
       title: '',
       slug: '',
       excerpt: '',
-      featuredImageUrl: '',
-      noHTMLExcerpt: ''
+      featuredImageUrl: ''
     };
     return _this;
   }
@@ -313,7 +312,14 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         className: "w3-text-brown",
         href: "/posts/".concat(this.props.slug)
-      }, this.props.title)), this.props.excerpt);
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", null, this.props.title))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        dangerouslySetInnerHTML: {
+          __html: this.props.excerpt
+        }
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        target: "_blank",
+        href: "/posts/".concat(this.props.slug)
+      }, "Read More"));
     }
   }]);
 
@@ -1228,7 +1234,12 @@ function (_Component) {
         className: "w3-col"
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("h1", null, "About me"))), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
         className: "w3-row"
-      })));
+      }, this.props.posts.map(function (post) {
+        return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
+          className: "w3-col l4 s12",
+          key: post.id
+        }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("h3", null, post.title.rendered), post.content.rendered);
+      }))));
     }
   }], [{
     key: "getInitialProps",
@@ -1243,7 +1254,7 @@ function (_Component) {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return axios__WEBPACK_IMPORTED_MODULE_11___default.a.get('http://localhost:8888/codeformylife/wp-json/wp/v2/posts/?_embed');
+                return axios__WEBPACK_IMPORTED_MODULE_11___default.a.get('http://localhost:8888/codeformylife/wp-json/wp/v2/pages/?slug=about-me');
 
               case 2:
                 response = _context.sent;

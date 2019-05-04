@@ -12,7 +12,7 @@ export default class extends Component {
   static async getInitialProps () {
 
     // Make request for posts.
-    const response = await axios.get( 'http://localhost:8888/codeformylife/wp-json/wp/v2/posts/?_embed')
+    const response = await axios.get( 'http://localhost:8888/codeformylife/wp-json/wp/v2/pages/?slug=about-me')
     
     // Return response to posts object in props.
     return {
@@ -36,7 +36,22 @@ export default class extends Component {
             </div>  
           </div>    
           <div className="w3-row">
-
+            {
+                  this.props.posts.map( post => {
+                    return (
+                      <div className="w3-col l4 s12" key={ post.id }>
+                        
+                        <h3>{ post.title.rendered }</h3> 
+                        { post.content.rendered } 
+                        
+                                           
+                        
+                                      
+                      </div> 
+                    
+                    )
+                  })
+                }
                
 
           </div>  

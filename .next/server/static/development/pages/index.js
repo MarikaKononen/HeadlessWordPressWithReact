@@ -157,10 +157,10 @@ __webpack_require__.r(__webpack_exports__);
   }, "About Me"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "w3-padding-large"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/posts"
+    href: "/articles"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/posts"
-  }, "Posts"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    href: "/articles"
+  }, "Articles"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "w3-padding-large"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/coding"

@@ -13,8 +13,7 @@ class PostExcerptCard extends Component {
             title: '',  
             slug: '',
             excerpt: '',
-            featuredImageUrl: '',
-            noHTMLExcerpt: ''
+            featuredImageUrl: ''
         }    
     }
     
@@ -27,11 +26,11 @@ class PostExcerptCard extends Component {
                 </div>
                 <Link  href={ `/posts/${ this.props.slug }` }>
                     <a className="w3-text-brown" href={ `/posts/${ this.props.slug }` }>
-                        { this.props.title }
+                        <h3>{ this.props.title }</h3>
                     </a> 
                 </Link>  
-               
-                {this.props.excerpt}
+                <div dangerouslySetInnerHTML={{__html: this.props.excerpt }}></div>
+                <a target="_blank" href={`/posts/${ this.props.slug }` }>Read More</a>
            
                 
             </div>
