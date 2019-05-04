@@ -1,4 +1,3 @@
-
 import Navigation from '../components/Navigation'
 import Head from '../components/Head'
 import PostExcerptCard from '../components/PostExcerptCard'

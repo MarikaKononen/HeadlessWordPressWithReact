@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -229,23 +229,17 @@ __webpack_require__.r(__webpack_exports__);
     href: "/coding"
   }, "Coding"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "w3-padding-large"
-  }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/coding/wordpress"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/wordpress"
+    href: "/coding/wordpress"
   }, "WordPress"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "w3-padding-large"
-  }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/coding/react"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/wordpress"
-  }, "React"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "w3-padding-large"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/posts"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/posts"
-  }, "Posts")))));
+    href: "/coding/react"
+  }, "React")))));
 });
 
 /***/ }),
@@ -1301,7 +1295,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 7:
+/***/ 9:
 /*!******************************!*\
   !*** multi ./pages/posts.js ***!
   \******************************/

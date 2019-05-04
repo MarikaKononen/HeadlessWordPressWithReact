@@ -136,23 +136,17 @@ __webpack_require__.r(__webpack_exports__);
     href: "/coding"
   }, "Coding"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "w3-padding-large"
-  }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/coding/wordpress"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/wordpress"
+    href: "/coding/wordpress"
   }, "WordPress"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "w3-padding-large"
-  }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/coding/react"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/wordpress"
-  }, "React"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "w3-padding-large"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/posts"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/posts"
-  }, "Posts")))));
+    href: "/coding/react"
+  }, "React")))));
 });
 
 /***/ }),
@@ -12690,7 +12684,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 6:
+/***/ 8:
 /*!************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fposts&absolutePagePath=%2FUsers%2Fmarikakononen%2FKoodaus%2FKoodausProjektit%2FGitHub%2FHeadlessWordPressWithReact%2Fpages%2Fposts.js ***!
   \************************************************************************************************************************************************************************************/
@@ -12713,5 +12707,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[6,"static/runtime/webpack.js","styles"]]]);
+},[[8,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=posts.js.map

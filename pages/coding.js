@@ -1,4 +1,3 @@
-
 import Navigation from '../components/Navigation'
 import Head from '../components/Head'
 import React, { Component, Fragment } from 'react'
@@ -12,7 +11,7 @@ export default class extends Component {
   static async getInitialProps () {
 
     // Make request for posts.
-    const response = await axios.get( 'http://localhost:8888/codeformylife/wp-json/wp/v2/posts/?categories/coding')
+    const response = await axios.get( 'http://localhost:8888/codeformylife/wp-json/wp/v2/posts?categories=3')
     
     // Return response to posts object in props.
     return {

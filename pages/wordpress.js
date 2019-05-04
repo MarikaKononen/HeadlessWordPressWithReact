@@ -11,7 +11,7 @@ export default class extends Component {
   static async getInitialProps () {
 
     // Make request for posts.
-    const response = await axios.get( 'http://localhost:8888/codeformylife/wp-json/wp/v2/posts/?categories/wordpress')
+    const response = await axios.get( 'http://localhost:8888/codeformylife/wp-json/wp/v2/posts?categories=4')
     
     // Return response to posts object in props.
     return {
@@ -31,7 +31,7 @@ export default class extends Component {
           </div>
           <div className="w3-row">
             <div className="w3-col">  
-              <h1>Our Posts Page!</h1>
+              <h1>WordPress</h1>
             </div>  
           </div>    
           <div className="w3-row">

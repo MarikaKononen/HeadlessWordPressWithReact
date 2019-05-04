@@ -136,23 +136,17 @@ __webpack_require__.r(__webpack_exports__);
     href: "/coding"
   }, "Coding"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "w3-padding-large"
-  }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/coding/wordpress"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/wordpress"
+    href: "/coding/wordpress"
   }, "WordPress"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "w3-padding-large"
-  }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/coding/react"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/wordpress"
-  }, "React"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "w3-padding-large"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/posts"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/posts"
-  }, "Posts")))));
+    href: "/coding/react"
+  }, "React")))));
 });
 
 /***/ }),
@@ -12658,7 +12652,7 @@ function (_Component) {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return axios__WEBPACK_IMPORTED_MODULE_11___default.a.get('http://localhost:8888/codeformylife/wp-json/wp/v2/posts/?categories/coding');
+                return axios__WEBPACK_IMPORTED_MODULE_11___default.a.get('http://localhost:8888/codeformylife/wp-json/wp/v2/posts?categories=3');
 
               case 2:
                 response = _context.sent;
@@ -12689,7 +12683,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!**************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcoding&absolutePagePath=%2FUsers%2Fmarikakononen%2FKoodaus%2FKoodausProjektit%2FGitHub%2FHeadlessWordPressWithReact%2Fpages%2Fcoding.js ***!
   \**************************************************************************************************************************************************************************************/
@@ -12712,5 +12706,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js","styles"]]]);
+},[[5,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=coding.js.map

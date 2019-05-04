@@ -32,29 +32,14 @@ export default class extends Component {
           </div>
           <div className="w3-row">
             <div className="w3-col">  
-              <h1>Our Posts Page!</h1>
+              <h1>About me</h1>
             </div>  
           </div>    
           <div className="w3-row">
 
-                {
-                  this.props.posts.map( post => {
-                    return (
-                      <div className="w3-col l4 s12" key={ post.id }>
-                        
-                        <PostExcerptCard title ={ post.title.rendered } 
-                                         slug ={ post.slug } 
-                                         excerpt = { post.excerpt.rendered }
-                                         featuredImageUrl =  {post.featured_media ?  post._embedded['wp:featuredmedia']['0'].media_details.sizes['thumbnail'].source_url : null}    
-                        />
-                                      
-                      </div> 
-                    
-                    )
-                  })
-                }
+               
 
-            </div>  
+          </div>  
         </div>
       </Fragment>
     )

@@ -11,7 +11,7 @@ export default () => (
       <div className="w3-container w3-deep-orange">
         <div className="w3-row">
           <div className="w3-col"> 
-          <h1>Your new server-side rendered React.js app!</h1>
+          <h1>Home</h1>
           </div>
         </div>
         <div className="w3-row">
