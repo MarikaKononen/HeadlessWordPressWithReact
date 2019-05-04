@@ -39,7 +39,7 @@ export default class extends Component {
                 {
                   this.props.posts.map( post => {
                     return (
-                      <div className="w3-col l4 s12" key={ post.id }>
+                      <div className="w3-col l3 s12" key={ post.id }>
                         
                         <PostExcerptCard title ={ post.title.rendered } 
                                          slug ={ post.slug } 

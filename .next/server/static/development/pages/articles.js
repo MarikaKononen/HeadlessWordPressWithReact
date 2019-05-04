@@ -312,14 +312,18 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         className: "w3-text-brown",
         href: "/posts/".concat(this.props.slug)
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", null, this.props.title))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
+        className: "w3-center"
+      }, this.props.title))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         dangerouslySetInnerHTML: {
           __html: this.props.excerpt
         }
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "w3-center"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         target: "_blank",
         href: "/posts/".concat(this.props.slug)
-      }, "Read More"));
+      }, "Read More")));
     }
   }]);
 
@@ -1236,7 +1240,7 @@ function (_Component) {
         className: "w3-row"
       }, this.props.posts.map(function (post) {
         return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
-          className: "w3-col l4 s12",
+          className: "w3-col l3 s12",
           key: post.id
         }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_PostExcerptCard__WEBPACK_IMPORTED_MODULE_9__["default"], {
           title: post.title.rendered,

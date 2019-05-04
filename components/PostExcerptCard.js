@@ -26,11 +26,12 @@ class PostExcerptCard extends Component {
                 </div>
                 <Link  href={ `/posts/${ this.props.slug }` }>
                     <a className="w3-text-brown" href={ `/posts/${ this.props.slug }` }>
-                        <h3>{ this.props.title }</h3>
+                        <h3 className="w3-center">{ this.props.title }</h3>
                     </a> 
                 </Link>  
                 <div dangerouslySetInnerHTML={{__html: this.props.excerpt }}></div>
-                <a target="_blank" href={`/posts/${ this.props.slug }` }>Read More</a>
+                <div className="w3-center"><a  target="_blank" href={`/posts/${ this.props.slug }` }>Read More</a></div>
+                
            
                 
             </div>
