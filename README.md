@@ -95,3 +95,10 @@ http://localhost:8888/codeformylife/wp-json/wp/v2/posts/?_embed
 
 {post.featured_media ?  post._embedded['wp:featuredmedia']['0'].media_details.sizes['thumbnail'].source_url : null}  
 
+# WordPress rest API - fetch posts categories   
+
+https://github.com/WP-API/WP-API/issues/2949   
+Find ID:   
+<your-page>/wp/v2/categories?slug=some-category-slug
+Do request:   
+<your-page>/wp/v2/posts?categories=some-category-id
