@@ -105,3 +105,8 @@ Do request:
  
  # WordPress rest API - fetch pages with slug name  
 <your-page>/codeformylife/wp-json/wp/v2/pages/?slug=<page-slug>   
+ 
+ # Sticky header - Nav   
+ Code I use as a reference:   
+ https://gist.github.com/agm1984/092ce379180e94bd13301bb33dbcd29f
+ 
