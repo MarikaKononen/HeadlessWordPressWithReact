@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -183,6 +183,119 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./components/NavContainer.js":
+/*!************************************!*\
+  !*** ./components/NavContainer.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _Navigation__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Navigation */ "./components/Navigation.js");
+
+
+
+
+
+
+
+
+var _this = undefined;
+
+
+
+/**
+ * This utility function allows function calls to be debounced.
+ * @param {Function} func Function that requires debouncing
+ * @param {Number} wait Wait time in milliseconds between successive invocations
+ */
+
+var debounce = function debounce(func, wait) {
+  var timeout;
+  return function () {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    clearTimeout(timeout);
+    timeout = setTimeout(function () {
+      return func.apply(_this, args);
+    }, wait);
+  };
+};
+
+var NavContainer =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(NavContainer, _Component);
+
+  function NavContainer(props) {
+    var _this2;
+
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, NavContainer);
+
+    _this2 = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(NavContainer).call(this, props));
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this2), "handleScroll", function () {
+      // + is unary operator, same as Number(window.scrollY)
+      var scrollPositionY = +window.scrollY;
+      return _this2.setState({
+        scrollPositionY: scrollPositionY
+      });
+    });
+
+    _this2.state = {
+      scrollPositionY: 0
+    };
+    return _this2;
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(NavContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      // 32 is the number of milliseconds to debounce
+      // I picked this because it's approx 1 frame (ie: 16.7ms)
+      // You'll want to modulate that to your taste.
+      // Add console.logs in handleScroll function to check if its flooding.
+      return window.addEventListener('scroll', debounce(this.handleScroll, 16));
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      return window.removeEventListener('scroll', debounce(this.handleScroll, 16));
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      // !! coerces value to be a Boolean
+      // we want it to be true or false (true if scrollPositionY> 0)
+      // it works because scrollPositionY=== 0 is falsy
+      var isScrolling = !!this.state.scrollPositionY;
+      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: isScrolling ? 'sticky isScrolling' : 'sticky'
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Navigation__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        isScrolling: isScrolling
+      }));
+    }
+  }]);
+
+  return NavContainer;
+}(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (NavContainer);
+
+/***/ }),
+
 /***/ "./components/Navigation.js":
 /*!**********************************!*\
   !*** ./components/Navigation.js ***!
@@ -192,57 +305,144 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
 
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "div_top_hypers",
-    className: "w3-brown"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    id: "ul_top_hypers",
-    className: "w3-padding-16"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "w3-padding-large"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/"
-  }, "Home"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "w3-padding-large"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/about-me"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/about-me"
-  }, "About Me"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "w3-padding-large"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/articles"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/articles"
-  }, "Articles"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "w3-padding-large"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/coding"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/coding"
-  }, "Coding"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "w3-padding-large"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/coding/wordpress"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/coding/wordpress"
-  }, "WordPress"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "w3-padding-large"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/coding/react"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/coding/react"
-  }, "React")))));
-});
+
+
+
+
+
+
+var _this = undefined;
+
+
+
+/**
+ * This utility function allows function calls to be debounced.
+ * @param {Function} func Function that requires debouncing
+ * @param {Number} wait Wait time in milliseconds between successive invocations
+ */
+
+var debounce = function debounce(func, wait) {
+  var timeout;
+  return function () {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    clearTimeout(timeout);
+    timeout = setTimeout(function () {
+      return func.apply(_this, args);
+    }, wait);
+  };
+};
+
+var Navigation =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Navigation, _Component);
+
+  function Navigation(props) {
+    var _this2;
+
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Navigation);
+
+    _this2 = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Navigation).call(this, props));
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this2), "handleScroll", function () {
+      // + is unary operator, same as Number(window.scrollY)
+      var scrollPositionY = +window.scrollY;
+      return _this2.setState({
+        scrollPositionY: scrollPositionY
+      });
+    });
+
+    _this2.state = {
+      scrollPositionY: 0
+    };
+    return _this2;
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Navigation, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      // 32 is the number of milliseconds to debounce
+      // I picked this because it's approx 1 frame (ie: 16.7ms)
+      // You'll want to modulate that to your taste.
+      // Add console.logs in handleScroll function to check if its flooding.
+      return window.addEventListener('scroll', debounce(this.handleScroll, 16));
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      return window.removeEventListener('scroll', debounce(this.handleScroll, 16));
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])({
+        className: "w3-row",
+        id: "navigation"
+      }, "className", "sticky"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+        id: "div_top_hypers"
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("ul", {
+        id: "ul_top_hypers",
+        className: "w3-padding-16"
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("li", {
+        className: "w3-padding-large"
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+        href: "/"
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        href: "/"
+      }, "Home"))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("li", {
+        className: "w3-padding-large"
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+        href: "/about-me"
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        href: "/about-me"
+      }, "About Me"))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("li", {
+        className: "w3-padding-large"
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+        href: "/articles"
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        href: "/articles"
+      }, "Articles"))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("li", {
+        className: "w3-padding-large"
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+        href: "/coding"
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        href: "/coding"
+      }, "Coding"))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("li", {
+        className: "w3-padding-large"
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+        href: "/coding/wordpress"
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        href: "/coding/wordpress"
+      }, "WordPress"))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("li", {
+        className: "w3-padding-large"
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+        href: "/coding/react"
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+        href: "/coding/react"
+      }, "React"))))));
+    }
+  }]);
+
+  return Navigation;
+}(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Navigation);
 
 /***/ }),
 
@@ -310,7 +510,7 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_FeaturedImage__WEBPACK_IMPORTED_MODULE_8__["default"], {
         featuredImgUrl: this.props.featuredImageUrl
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
-        href: "/posts/".concat(this.props.slug)
+        href: "/articles/".concat(this.props.slug)
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         className: "w3-text-brown",
         href: "/posts/".concat(this.props.slug)
@@ -324,7 +524,7 @@ function (_Component) {
         className: "w3-center"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         target: "_blank",
-        href: "/posts/".concat(this.props.slug)
+        href: "/articles/".concat(this.props.slug)
       }, "Read More")));
     }
   }]);
@@ -609,6 +809,36 @@ function _createClass(Constructor, protoProps, staticProps) {
   if (protoProps) _defineProperties(Constructor.prototype, protoProps);
   if (staticProps) _defineProperties(Constructor, staticProps);
   return Constructor;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _defineProperty; });
+/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__);
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
 }
 
 /***/ }),
@@ -1204,7 +1434,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var _components_Navigation__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Navigation */ "./components/Navigation.js");
+/* harmony import */ var _components_NavContainer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/NavContainer */ "./components/NavContainer.js");
 /* harmony import */ var _components_Head__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Head */ "./components/Head.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
@@ -1244,11 +1474,9 @@ function (_Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(_default, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_Head__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
-        className: "w3-container w3-deep-orange"
+      return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_Head__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_NavContainer__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        className: "w3-container w3-deep-orange content"
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
-        className: "w3-row"
-      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_Navigation__WEBPACK_IMPORTED_MODULE_7__["default"], null)), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
         className: "w3-row"
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
         className: "w3-col"
@@ -1320,7 +1548,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 6:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

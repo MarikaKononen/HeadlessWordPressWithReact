@@ -24,13 +24,13 @@ class PostExcerptCard extends Component {
                 <div className="w3-center">
                     <FeaturedImage featuredImgUrl = { this.props.featuredImageUrl }  />
                 </div>
-                <Link  href={ `/posts/${ this.props.slug }` }>
+                <Link  href={ `/articles/${ this.props.slug }` }>
                     <a className="w3-text-brown" href={ `/posts/${ this.props.slug }` }>
                         <h3 className="w3-center">{ this.props.title }</h3>
                     </a> 
                 </Link>  
                 <div dangerouslySetInnerHTML={{__html: this.props.excerpt }}></div>
-                <div className="w3-center"><a  target="_blank" href={`/posts/${ this.props.slug }` }>Read More</a></div>
+                <div className="w3-center"><a  target="_blank" href={`/articles/${ this.props.slug }` }>Read More</a></div>
                 
            
                 

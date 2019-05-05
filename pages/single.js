@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import Navigation from '../components/Navigation'
+import NavContainer from '../components/NavContainer'
+import Head from '../components/Head'
 import React, { Component } from 'react'
 import axios from 'axios';
 import { Fragment } from 'react'
@@ -25,15 +25,10 @@ export default class extends Component {
   render() {
     return (
       <Fragment>
-        <Head>
-          <title>{ this.props.post.title.rendered }</title>
-          <meta name="description" content={ `This is a single post for ${ this.props.post.title.rendered }` } />
-          <meta charSet="utf-8" />
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        </Head>
-        <Navigation/>
-            <div className="w3-container">
-              <div className="w3-row">
+        <Head />
+        <NavContainer />
+        <div className="w3-container w3-deep-orange content">
+              <div className="w3-row ">
                 <div className="w3-col l8 s12 w3-card-4 w3-margin w3-white">
                   <h1 className="w3-center">{ this.props.post.title.rendered }</h1>
                   

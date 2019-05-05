@@ -1,5 +1,4 @@
-
-import Navigation from '../components/Navigation'
+import NavContainer from '../components/NavContainer'
 import Head from '../components/Head'
 import PostExcerptCard from '../components/PostExcerptCard'
 import React, { Component, Fragment } from 'react'
@@ -26,10 +25,8 @@ export default class extends Component {
     return (
       <Fragment>
         <Head />
-        <div className="w3-container w3-deep-orange">
-          <div className="w3-row">
-            <Navigation/>
-          </div>
+        <NavContainer />
+        <div className="w3-container w3-deep-orange content">
           <div className="w3-row">
             <div className="w3-col">  
               <h1>About me</h1>
