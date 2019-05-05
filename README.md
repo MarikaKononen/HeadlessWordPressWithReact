@@ -108,5 +108,9 @@ Do request:
  
  # Sticky header - Nav   
  Code I use as a reference:   
- https://gist.github.com/agm1984/092ce379180e94bd13301bb33dbcd29f
+ https://gist.github.com/agm1984/092ce379180e94bd13301bb33dbcd29f   
+ 
+ CSS took from example:  
+ https://www.w3schools.com/howto/howto_js_navbar_sticky.asp   
+ 
  
