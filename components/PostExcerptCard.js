@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Link from 'next/link'
 import FeaturedImage from './FeaturedImage'
-import "../style.css"
+import "../App.css"
 
 
 

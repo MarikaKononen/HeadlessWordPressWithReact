@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Fragment } from 'react'
-import "../style.css"
+import "../App.css"
 
 
 

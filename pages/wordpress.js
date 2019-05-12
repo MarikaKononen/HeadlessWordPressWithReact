@@ -3,7 +3,7 @@ import Head from '../components/Head'
 import React, { Component, Fragment } from 'react'
 import PostExcerptCard from '../components/PostExcerptCard'
 import axios from 'axios'
-import "../style.css"
+import "../App.css"
 
 export default class extends Component {
 

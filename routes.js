@@ -2,7 +2,7 @@ const routes = require( 'next-routes' );
 
 // Setup router.
 module.exports = routes()
-  .add( 'index', '/' )
+  .add( 'home', '/' )
   .add( 'articles' )
   .add( 'single', '/articles/:slug' )
   .add( 'coding', '/coding' )

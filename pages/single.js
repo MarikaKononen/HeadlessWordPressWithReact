@@ -3,7 +3,7 @@ import Head from '../components/Head'
 import React, { Component } from 'react'
 import axios from 'axios';
 import { Fragment } from 'react'
-import "../style.css"
+import "../App.css"
 
 export default class extends Component {
 
