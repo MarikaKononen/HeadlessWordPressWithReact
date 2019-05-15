@@ -2,6 +2,7 @@ import NavContainer from '../components/NavContainer'
 import Head from '../components/Head'
 import React, { Component, Fragment } from 'react'
 import PostExcerptCard from '../components/PostExcerptCard'
+import ContentContainer from '../components/ContentContainer'
 import 'bootstrap/dist/css/bootstrap.css';
 import axios from 'axios'
 import "../App.css"
@@ -17,7 +18,8 @@ class Home extends React.Component {
 
     // Return response to posts object in props.
     return {
-      posts: response.data
+      posts: response.data,
+      titleOfPage: 'Home'
      
     }
   }
@@ -29,13 +31,9 @@ class Home extends React.Component {
         <Fragment>
             <Head />
             <NavContainer />
+            
             <div className="w3-container w3-deep-orange content">
-              
-              <div className="w3-row">
-                <div className="w3-col"> 
-                  <h1>Home</h1>
-                </div>
-              </div>
+            <ContentContainer pageTitle = { this.props.titleOfPage } />  
 
               <div className="w3-row">
 
@@ -44,8 +42,8 @@ class Home extends React.Component {
                       return (
                         <div className="w3-col l3 s12" key={ post.id }>
                           
-                          <PostExcerptCard title ={ post.title.rendered } 
-                                          slug ={ post.slug } 
+                          <PostExcerptCard title = { post.title.rendered } 
+                                          slug = { post.slug } 
                                           excerpt = { post.excerpt.rendered }
                                         
                                            

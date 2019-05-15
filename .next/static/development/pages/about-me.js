@@ -300,6 +300,31 @@ function (_Component) {
 
 /***/ }),
 
+/***/ "./components/PageTitle.js":
+/*!*********************************!*\
+  !*** ./components/PageTitle.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var PageTitle = function PageTitle(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w3-row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w3-col"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, props.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "This is from PageTitle component")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PageTitle);
+
+/***/ }),
+
 /***/ "./components/PostExcerptCard.js":
 /*!***************************************!*\
   !*** ./components/PostExcerptCard.js ***!
@@ -12773,12 +12798,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_NavContainer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/NavContainer */ "./components/NavContainer.js");
 /* harmony import */ var _components_Head__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Head */ "./components/Head.js");
 /* harmony import */ var _components_PostExcerptCard__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/PostExcerptCard */ "./components/PostExcerptCard.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../App.css */ "./App.css");
-/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_App_css__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _components_PageTitle__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/PageTitle */ "./components/PageTitle.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../App.css */ "./App.css");
+/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_App_css__WEBPACK_IMPORTED_MODULE_13__);
+
 
 
 
@@ -12798,28 +12825,33 @@ var _default =
 function (_Component) {
   Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(_default, _Component);
 
-  function _default() {
+  function _default(props) {
+    var _this;
+
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, _default);
 
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(_default).apply(this, arguments));
-  }
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(_default).call(this, props));
+    _this.state = {
+      titleOfPage: 'About Me'
+    };
+    return _this;
+  } // Resolve promise and set initial props.
+
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(_default, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_Head__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_NavContainer__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_11__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement(_components_Head__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement(_components_NavContainer__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("div", {
         className: "w3-container w3-deep-orange content"
-      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
-        className: "w3-row"
-      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
-        className: "w3-col"
-      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("h1", null, "About me"))), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement(_components_PageTitle__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        pageTitle: this.props.titleOfPage
+      }), react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("div", {
         className: "w3-row"
       }, this.props.posts.map(function (page) {
-        return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
+        return react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("div", {
           className: "w3-col l6 s12",
           key: page.id
-        }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("h3", null, page.title.rendered), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
+        }, react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("h3", null, page.title.rendered), react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("div", {
           dangerouslySetInnerHTML: {
             __html: page.content.rendered
           }
@@ -12828,7 +12860,6 @@ function (_Component) {
     }
   }], [{
     key: "getInitialProps",
-    // Resolve promise and set initial props.
     value: function () {
       var _getInitialProps = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
       /*#__PURE__*/
@@ -12839,7 +12870,7 @@ function (_Component) {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return axios__WEBPACK_IMPORTED_MODULE_11___default.a.get('http://localhost:8888/codeformylife/wp-json/wp/v2/pages/?slug=about-me');
+                return axios__WEBPACK_IMPORTED_MODULE_12___default.a.get('http://localhost:8888/codeformylife/wp-json/wp/v2/pages/?slug=about-me');
 
               case 2:
                 response = _context.sent;
@@ -12864,13 +12895,13 @@ function (_Component) {
   }]);
 
   return _default;
-}(react__WEBPACK_IMPORTED_MODULE_10__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_11__["Component"]);
 
 
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fabout-me&absolutePagePath=%2FUsers%2Fmarikakononen%2FKoodaus%2FKoodausProjektit%2FGitHub%2FHeadlessWordPressWithReact%2Fpages%2Fabout-me.js ***!
   \******************************************************************************************************************************************************************************************/
@@ -12893,5 +12924,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js","styles"]]]);
+},[[4,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=about-me.js.map

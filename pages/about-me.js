@@ -1,11 +1,19 @@
 import NavContainer from '../components/NavContainer'
 import Head from '../components/Head'
 import PostExcerptCard from '../components/PostExcerptCard'
+import PageTitle from '../components/PageTitle'
 import React, { Component, Fragment } from 'react'
 import axios from 'axios'
 import "../App.css"
 
 export default class extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      titleOfPage: 'About Me'
+    }
+  }
 
   // Resolve promise and set initial props.
   static async getInitialProps () {
@@ -27,11 +35,9 @@ export default class extends Component {
         <Head />
         <NavContainer />
         <div className="w3-container w3-deep-orange content">
-          <div className="w3-row">
-            <div className="w3-col">  
-              <h1>About me</h1>
-            </div>  
-          </div>    
+        
+          <PageTitle pageTitle = { this.props.titleOfPage }/>  
+
           <div className="w3-row">
             {
                   this.props.posts.map( page => {
